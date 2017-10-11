@@ -3,6 +3,7 @@
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
     <List
+    	id="OperationList"
 		items="{
 			path: 'operation>/Operations',
 			sorter: {
@@ -14,10 +15,16 @@
 		}"
 		class="sapUiResponsiveMargin"
     	width="auto"
-		headerText="{i18n>operationListTitle}" 
 		mode="Delete" 
 		delete="handleDelete" 
 		enableBusyIndicator="true" >
+    	<headerToolbar>
+        	<Toolbar>
+            	<Title text="{i18n>operationListTitle}"/>
+            	<ToolbarSpacer/>
+            	<SearchField width="50%" liveChange="onFilterOperations" selectOnFocus="false"/>
+        	</Toolbar>
+    	</headerToolbar>
 		<ObjectListItem
 			title="{operation>Name}"
 			icon="{path: 'operation>Type', formatter: '.formatter.OperationType'}"
