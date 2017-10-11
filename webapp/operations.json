@@ -1,0 +1,24 @@
+{
+  "Operations": [
+	{
+	  "Name": "Salary",
+	  "Amount": 4500.2000,
+	  "Type": true
+	},
+	{
+	  "Name": "Netflix",
+	  "Amount": 11.9500,
+	  "Type": false
+	},
+	{
+	  "Name": "Appartment Rent",
+	  "Amount": 900.3000,
+	  "Type": false
+	},
+	{
+	  "Name": "Car Insurence",
+	  "Amount": 320.9500,
+	  "Type": false
+	}
+  ]
+}

@@ -1,0 +1,34 @@
+<mvc:View
+   controllerName="banking.controller.OperationList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+    <List
+		items="{
+			path: 'operation>/Operations',
+			sorter: {
+				path: 'Type',
+				descending: true,
+				group: true
+			},
+			groupHeaderFactory: '.getGroupHeader'
+		}"
+		class="sapUiResponsiveMargin"
+    	width="auto"
+		headerText="{i18n>operationListTitle}" 
+		mode="Delete" 
+		delete="handleDelete" 
+		enableBusyIndicator="true" >
+		<ObjectListItem
+			title="{operation>Name}"
+			icon="{path: 'operation>Type', formatter: '.formatter.OperationType'}"
+			number="{
+				parts: [{path: 'operation>Amount'}, {path: 'view>/currency'}],
+				type: 'sap.ui.model.type.Currency',
+				formatOptions: { showMeasure: false }
+			}"
+			numberUnit="{view>/currency}"
+			numberState="{= ${operation>Type} === false ? 'Error' : 'Success' }">
+		</ObjectListItem>
+		
+	</List>
+</mvc:View>

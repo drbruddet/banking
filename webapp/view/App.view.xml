@@ -7,7 +7,9 @@
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<mvc:XMLView viewName="banking.view.OperationList"/>
+				</content>
 			</Page>
 		</pages>
 	</App>

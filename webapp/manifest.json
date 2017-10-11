@@ -64,6 +64,10 @@
 				"settings": {
 					"bundleName": "banking.i18n.i18n"
 				}
+			},
+			"operation": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "operations.json"
 			}
 		},
 		"resources": {
